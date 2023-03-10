@@ -15,13 +15,14 @@ export class ServerElementComponent implements
   AfterViewInit,
   AfterViewChecked,
   OnDestroy {
-
-  @Input('srvElement') element: {type: string, name: string, content: string};
-  @Input() name: string;
-  @ViewChild('heading', {static:true}) header: ElementRef;
+  
+    @Input('srvElement') element: {type: string, name: string, content: string};
+    @Input() name: string;
+    @ViewChild('heading', {static:true}) header: ElementRef;
   @ContentChild('contentParagraph', {static:true}) paragraph: ElementRef;
 
-  constructor() {
+  
+constructor() {
     console.log('constructor called');
    }
 
@@ -60,7 +61,6 @@ export class ServerElementComponent implements
   ngAfterViewChecked() {
     console.log('ngAfterViewChecked called');
   }
-
   ngOnDestroy() {
     console.log('ngOnDestroy called');
   }
